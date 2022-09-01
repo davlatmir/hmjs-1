@@ -91,6 +91,10 @@
       /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
    */
+      const el2 = document.querySelector('.dropdown-toggle');
+      el2.dataset.type = "button";
+      el2.removeAttribute('type')
+  
 
       /*
   8. Выведите в консоль все имеющиеся атрибуты и их значения тега у которого
