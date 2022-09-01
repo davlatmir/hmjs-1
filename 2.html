@@ -38,18 +38,27 @@
   1. Ко всем элементам, имеющим класс "dropdown-item" добавить еще один класс
   "super-dropdown", необходимо использовать методы forEach и querySelectorAll и
   свойство classList у элементов.
-   */
-
+   */ 
+      const dropdownItem = document.querySelectorAll('.dropdown-item');
+      dropdownItem.forEach(element => {
+        element.classList.add('super-dropdown')
+      });
+       // dropdownItem.classList.add('super-dropdown')
       /*
   2. У элемента с классом btn необходимо убрать класс "btn-secondary", если он
   присутствует у этого элемента, либо добавить, если такого класса у элемента
   не было.
    */
+      const element = document.querySelector(".btn-secondary");
+      element.classList.remove("btn-secondary");
 
       /*
   3. Необходимо удалить класс "dropdown-menu" у элемента, у которого
   присутствует класс "menu".
    */
+
+    const element2 = document.querySelector(".dropdown-menu");
+      element2.classList.remove("menu");
 
       /*
   4. Используя метод insertAdjacentHTML добавьте после div'a с классом
