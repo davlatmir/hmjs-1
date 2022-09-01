@@ -38,12 +38,12 @@
   1. Ко всем элементам, имеющим класс "dropdown-item" добавить еще один класс
   "super-dropdown", необходимо использовать методы forEach и querySelectorAll и
   свойство classList у элементов.
-   */ 
-      const dropdownItem = document.querySelectorAll('.dropdown-item');
-      dropdownItem.forEach(element => {
-        element.classList.add('super-dropdown')
+   */
+      const dropdownItem = document.querySelectorAll(".dropdown-item");
+      dropdownItem.forEach((element) => {
+        element.classList.add("super-dropdown");
       });
-       
+      // dropdownItem.classList.add('super-dropdown')
       /*
   2. У элемента с классом btn необходимо убрать класс "btn-secondary", если он
   присутствует у этого элемента, либо добавить, если такого класса у элемента
@@ -57,7 +57,7 @@
   присутствует класс "menu".
    */
 
-    const element2 = document.querySelector(".dropdown-menu");
+      const element2 = document.querySelector(".dropdown-menu");
       element2.classList.remove("menu");
 
       /*
@@ -65,10 +65,20 @@
   "dropdown" следующую разметку:
     <a href="#">link</a>
    */
+/*
+      const divEL1 = document.createElement("div");
+      divEL1.className = "dropdown";
+      divEL1.innerHTML = '<a href="#">link</a>';
+      document.body.append(divEL1);
+      divEL1.insertAdjacentHTML("beforbegin", div);
+
+      /// в процессе */
 
       /*
   5. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
    */
+     const tmpNode = document.getElementById('dropdownMenuButton')
+     tmpNode.id = 'superDropdown'
 
       /*
   6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
