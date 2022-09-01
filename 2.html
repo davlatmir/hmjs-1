@@ -84,6 +84,9 @@
   6. Добавьте атрибут data-dd со значением 3 элементу у которого существует
   атрибут "aria-labelledby" равный "dropdownMenuButton" используя dataset.
    */
+      const el = document.querySelector('.dropdown-menu');
+      el.dataset.datadd = 'dropdownMenuButton'; // data-dd дифиз дал ощибку убрал
+      
 
       /*
   7. Удалите атрибут type у элемента с классом "dropdown-toggle".
