@@ -86,6 +86,16 @@
   "Вы навели на textarea."
    */
 
+   const mouseOver = document.getElementsByTagName('textarea');
+   mouseOver.addEventListener('mouseenter', (event) => {
+    console.log('Вы навели на textarea');
+   });
+
+   onmouseover = (event) => { 
+    
+   };
+
+
 
   /*
   5. Необходимо повесить событие клика на тег ul. В обработчике события в
