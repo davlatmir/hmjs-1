@@ -101,6 +101,14 @@
       /*
   7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
    */
+
+    const colorLi = document.getElementsByTagName('li')
+    for (let i = 0; i < 4; i++) {
+      colorLi[1].style.backgroundColor = "#AA0000";
+      colorLi[3].style.backgroundColor = "#AA0000";
+    }
+
+
     </script>
   </body>
 </html>
