@@ -30,7 +30,7 @@
 
     <br />
 
-    <textarea></textarea>
+    <textarea onmouseenter="textareaEntered()"></textarea>
 
     <br />
 
@@ -79,10 +79,21 @@
   Необходимо использовать делегирование.
   */
 
+  function clicked(evt) {
+    console.log(evt.target.classList.contains('super_element') ? 'присутствует' : 'отсутствует')
+  }
+      document.addEventListener('click', clicked)   // тоже помог наш программист 
+      
+
       /*
   4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение:
   "Вы навели на textarea."
    */
+
+function textareaEntered () {
+  console.log("Вы навели на textarea")
+}      // тоже помог наш программист 
+
 
       /*
   5. Необходимо повесить событие клика на тег ul. В обработчике события в
@@ -91,6 +102,7 @@
   Если клик был не по кнопке, то ничего выводить не нужно.
   Необходимо использовать делегирование.
    */
+  
 
       /*
   6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только
@@ -102,11 +114,16 @@
   7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
    */
 
-    const colorLi = document.getElementsByTagName('li')
-    for (let i = 0; i < 4; i++) {
-      colorLi[1].style.backgroundColor = "#AA0000";
-      colorLi[3].style.backgroundColor = "#AA0000";
-    }
+    // const colorLi = document.getElementsByTagName('li')
+    // for (let i = 0; i < 4; i++) {
+    //   colorLi[1].style.backgroundColor = "#AA0000";
+    //   colorLi[3].style.backgroundColor = "#AA0000";
+    // }  //я сделал
+
+    let liElements = document.querySelectorAll('li')
+    for (let i = 1; i < liElements.length; i +=2) {
+      liElements[i].style.backgroundColor = "#AA0000";
+    }  // наш программист обяснил можно сделать по другому
 
 
     </script>
